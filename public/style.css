@@ -1,3 +1,12 @@
+/* fonts */
+@font-face {
+  font-family: "altehaas";
+  src: url(AlteHaasGroteskRegular.ttf) format("truetype");
+}
+html {
+  font-family: altehaas;
+}
+
 /* dividing the page in nav, section and footer */
 .pagelayout {
   display: flex;
@@ -20,16 +29,16 @@ nav {
 }
 nav a {
   display: inline-block;
-  color: #820;
+  color: rgb(255, 255, 255);
   background: #f80;
   font-size: 1em;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   padding: 1em;
 }
 nav a:hover {
   color: #f80;
-  background: #820;
+  background: rgb(255, 255, 255);
 }
 
 /* main content pane */
@@ -49,18 +58,13 @@ footer {
 footer > span, a {
   display: inline-block;
   font-size: 1em;
-  color: #000;
+  color: rgba(46, 44, 44, 0.938);
   background: #fff;
   padding: 1em;
   text-decoration: none;
 }
-footer a {
-  font-weight: bold;
-}
 footer a:hover {
-  font-weight: bold;
-  color: #fff;
-  background: #000;
+  text-decoration: underline;
 }
 footer *:first-child {
   flex-grow: 1;
