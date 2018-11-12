@@ -5,10 +5,17 @@
   height: calc(100% - 1px); /* buffer to avoid scrollbars */
 }
 
+/* general wrapping */
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* navigation header */
 nav {
   background: #f80;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
 }
 nav a {
@@ -36,9 +43,10 @@ section {
 /* footer */
 footer {
   display: flex;
+  flex-wrap: wrap;
   border-top: 1px solid #bbb;
 }
-footer * {
+footer > span, a {
   display: inline-block;
   font-size: 1em;
   color: #000;
