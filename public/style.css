@@ -4,7 +4,7 @@
   /* https://www.1001fonts.com/alte-haas-grotesk-font.html */
   src: url(AlteHaasGroteskRegular.ttf) format("truetype");
 }
-html {
+html * {
   font-family: altehaas;
 }
 
@@ -12,7 +12,7 @@ html {
 .pagelayout {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 1px); /* buffer to avoid scrollbars */
+  min-height: 100%
 }
 
 /* general wrapping */
@@ -69,4 +69,28 @@ footer a:hover {
 }
 footer *:first-child {
   flex-grow: 1;
+}
+
+
+
+
+/* team view */
+.person {
+  display: flex;
+  flex: 1 1 50%;
+}
+.person img {
+  width: 200px;
+}
+.person .details {
+  min-width: 200px;
+}
+.person > * {
+  padding: 20px;
+}
+.person h1 {
+  font-size: 1.5em;
+}
+.person .details > * {
+  padding-bottom: 1em;
 }
