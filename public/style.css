@@ -1,6 +1,7 @@
 /* fonts */
 @font-face {
   font-family: "altehaas";
+  /* https://www.1001fonts.com/alte-haas-grotesk-font.html */
   src: url(AlteHaasGroteskRegular.ttf) format("truetype");
 }
 html {
