@@ -7,6 +7,7 @@ url =  require('url')
 
 host = process.argv[2] || "::1"
 port = process.argv[3] || 8080
+prefix = process.argv[4] || ""
 
 var server = http.createServer( (req, res) => {
   if(req.url != path.normalize(req.url)) {
@@ -14,7 +15,7 @@ var server = http.createServer( (req, res) => {
     res.end('invalid path')
   } else {
     if(req.url.endsWith('/')) req.url += 'index.html'
-    var pathname = url.parse(req.url).pathname
+    var pathname = url.parse(req.url).pathname.substr(prefix.length)
     fs.createReadStream(`./public${pathname}`)
       .on('error', () => {
         res.writeHead(404)
