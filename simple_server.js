@@ -26,8 +26,9 @@ var server = http.createServer( (req, res) => {
           '.styl': 'text/css',
           '.svg': 'image/svg+xml',
           '.png': 'image/png',
+          '.pdf': 'application/pdf',
           '.jpg': 'image/jpg',
-          '.html': 'text/html; charset=utf-8'
+          '.html': 'text/html'
         };
         // 'Content-Type': 'text/html; charset=utf-8'
         res.writeHead(200, {'Content-Type': contenttypes[path.extname(pathname)] || 'text/plain'})})
