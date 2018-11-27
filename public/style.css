@@ -4,23 +4,17 @@
   /* https://www.1001fonts.com/alte-haas-grotesk-font.html */
   src: url(AlteHaasGroteskRegular.ttf) format("truetype");
 }
+html {
+  font-size: 16px;
+}
 html * {
   font-family: altehaas;
-}
-h2 {
-  font-size: 2em;
-  padding: 20px;
-}
-p {
-  padding: 20px;
-  line-height: 1.2em;
 }
 
 /* dividing the page in nav, section and footer */
 .pagelayout {
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100%;
   background: url(clarify/fest.jpg);
   background-size: cover;
@@ -36,7 +30,6 @@ p {
 
 /* navigation header */
 nav {
-  width: 100%;
   background: #f80;
   display: flex;
   flex-wrap: wrap;
@@ -58,18 +51,45 @@ nav a:hover {
 
 
 /* main content pane */
-section {
+div .trunk {
+  margin: 0 auto;
   flex-grow: 1;
-  max-width: 900px;
+  max-width: 765px; /* 5px tolerance for two images next to each other */
+}
+.trunk section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.trunk section * {
+  flex: 1 1 50%;
+  max-width: 350px;
+}
+.trunk h2 {
+  font-size: 2.2em;
+  margin-top: 2.4em;
+  margin-bottom: 1.2em;
+}
+.trunk p {
+  margin-right: 30px;
+  margin-bottom: 3.6em;
+  line-height: 1.2em;
+}
+.trunk img {
+  width: 350px;
+  margin-right: 30px;
+  margin-bottom: 1.2em;
+}
+img.blur {
+  filter: blur(5px) saturate(30%) brightness(1.5);
 }
 
 
 /* footer */
 footer {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid #bbb;
+  margin-top: 2.4em;
 }
 footer > span, a {
   display: inline-block;
@@ -90,21 +110,29 @@ footer *:first-child {
 
 
 /* team view */
+.team {
+  display: flex;
+  overflow-x: auto;
+}
 .person {
   display: flex;
-  flex: 1 1 50%;
+  flex-direction: column;
+  background: #f80;
 }
 .person img {
   width: 200px;
 }
 .person .details {
-  min-width: 200px;
 }
 .person > * {
-  padding: 20px;
+  padding: 1.2em 5px 5px 2px;
 }
-.person h1 {
-  font-size: 1.5em;
+.person img {
+  margin: 0;
+  padding: 0;
+}
+.person .name {
+  font-weight: bold;
 }
 .person .details > * {
   padding-bottom: 1em;
