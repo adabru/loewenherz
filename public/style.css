@@ -84,6 +84,9 @@ div .trunk {
   margin-right: 30px;
   margin-bottom: 1.2em;
 }
+.trunk iframe {
+  margin: 10px;
+}
 img.blur {
   filter: blur(5px) saturate(30%) brightness(1.5);
 }
