@@ -121,6 +121,7 @@ footer > *:first-child {
 
 /* team view */
 .team_container {
+  max-width: calc(100vw - 16px); /* with tolerance for scrollbar */
   position: relative;
 }
 .team {
@@ -145,7 +146,7 @@ footer > *:first-child {
   position: absolute;
   width: 80px;
   margin: 0;
-  top: 50%;
+  top: 200px;
   z-index: 1;
   transition-duration: .5s;
 }
