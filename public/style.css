@@ -91,6 +91,7 @@ img.blur {
 /* footer */
 footer {
   position: fixed; height: 3em; width: 100%; bottom: 0; left: 0;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid #bbb;
@@ -122,10 +123,19 @@ footer > *:first-child {
   display: flex;
   overflow-x: auto;
 }
+.team::before {
+  content: '';
+  padding-left: 200px;
+}
+.team::after {
+  content: '';
+  padding-right: 200px;
+}
 .team_container .arrows {
   position: absolute;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .team_container #arrow_right, .team_container #arrow_left {
   position: absolute;
@@ -133,6 +143,10 @@ footer > *:first-child {
   margin: 0;
   top: 50%;
   z-index: 1;
+  transition-duration: .5s;
+}
+.team_container #arrow_right:hover, .team_container #arrow_left:hover {
+  filter: brightness(50%);
 }
 .team_container #arrow_right {
   right: -100px;
@@ -143,14 +157,17 @@ footer > *:first-child {
 }
 .person {
   position: relative;
+  margin: 10px;
+  padding: 10px 20px;
   font-size: .8em;
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
   background: #f80;
+  box-shadow: 0px 0px 6px 3px #f80;
 }
 .person:nth-child(2n) {
   background: #fff;
+  box-shadow: 0px 0px 6px 3px #fff;
 }
 .person img {
   width: 180px;
