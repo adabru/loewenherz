@@ -40,6 +40,19 @@ nav {
   justify-content: flex-end;
   border-top: 1px solid #bbb;
 }
+nav .logo {
+  height: 3em;
+  width: 3em;
+  margin: 0em auto 0 6px;
+  background:  url(assets/Villa_Loewe.png);
+  background-size: cover;
+  padding: 0;
+}
+nav .logo:hover {
+  background:  url(assets/Villa_Loewe2.png);
+  background-size: cover;
+}
+
 nav a {
   display: inline-block;
   color: rgb(255, 255, 255);
@@ -47,7 +60,7 @@ nav a {
   font-size: 1em;
   text-decoration: none;
   font-weight: normal;
-  padding: 1em;
+  
 }
 nav a:hover {
   color: #f80;
@@ -222,6 +235,10 @@ ul {
 
 li {
   padding-top:1em;
+}
+
+.logo {
+  vertical-align: left;
 }
 
 
