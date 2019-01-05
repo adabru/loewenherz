@@ -137,3 +137,14 @@ footer *:first-child {
 .person .details > * {
   padding-bottom: 1em;
 }
+
+/* Text Style*/
+p.thick {
+  font-weight: bold;
+}
+h3.thick {
+
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 1.2em;
+}
