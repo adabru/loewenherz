@@ -33,6 +33,7 @@ html * {
 /* navigation header */
 nav {
   position: fixed; width: 100%; height: 3em;
+  z-index: 1;
   background: #f80;
   display: flex;
   justify-content: flex-end;
@@ -119,12 +120,21 @@ footer > *:first-child {
   overflow-x: auto;
 }
 .person {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: #f80;
 }
 .person img {
   width: 200px;
+}
+.person .overlay {
+  position: absolute;
+  transition-duration: .2s;
+  opacity: 0;
+}
+.person .overlay:hover {
+  opacity: .9;
 }
 /*.person .details {
 }*/
