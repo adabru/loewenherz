@@ -9,6 +9,7 @@ html {
 }
 html * {
   font-family: altehaas;
+  line-height: 1.2em;
 }
 
 
@@ -37,6 +38,7 @@ nav {
   background: #f80;
   display: flex;
   justify-content: flex-end;
+  border-top: 1px solid #bbb;
 }
 nav a {
   display: inline-block;
@@ -55,7 +57,7 @@ nav a:hover {
 
 /* main content pane */
 div .trunk {
-  margin: 0 auto;
+  margin: 3em auto;
   flex-grow: 1;
   max-width: 765px; /* 5px tolerance for two images next to each other */
 }
@@ -75,7 +77,6 @@ div .trunk {
 .trunk p {
   margin-right: 30px;
   margin-bottom: 3.6em;
-  line-height: 1.2em;
 }
 .trunk img {
   width: 350px;
@@ -93,7 +94,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid #bbb;
-  margin-top: 2.4em;
 }
 footer > span, a {
   display: inline-block;
@@ -115,18 +115,45 @@ footer > *:first-child {
 
 
 /* team view */
+.team_container {
+  position: relative;
+}
 .team {
   display: flex;
   overflow-x: auto;
 }
+.team_container .arrows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.team_container #arrow_right, .team_container #arrow_left {
+  position: absolute;
+  width: 80px;
+  margin: 0;
+  top: 50%;
+  z-index: 1;
+}
+.team_container #arrow_right {
+  right: -100px;
+}
+.team_container #arrow_left {
+  left: -100px;
+  transform: scaleX(-1);
+}
 .person {
   position: relative;
+  font-size: .8em;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   background: #f80;
 }
+.person:nth-child(2n) {
+  background: #fff;
+}
 .person img {
-  width: 200px;
+  width: 180px;
 }
 .person .overlay {
   position: absolute;
@@ -139,11 +166,11 @@ footer > *:first-child {
 /*.person .details {
 }*/
 .person > * {
-  padding: 1.2em 5px 5px 2px;
+  padding: 1.2em 0 5px 0;
 }
 .person img {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 .person .name {
   font-weight: bold;
@@ -155,9 +182,25 @@ footer > *:first-child {
 
 
 /* responsive */
+@media only screen and (max-width: 1000px) {
+  .team_container #arrow_right {
+    right: -50px;
+  }
+  .team_container #arrow_left {
+    left: -50px;
+  }
+}
 @media only screen and (max-width: 950px) {
   footer > span:first-child {
     font-size: .8em;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .team_container #arrow_right {
+    right: 10px;
+  }
+  .team_container #arrow_left {
+    left: 10px;
   }
 }
 @media only screen and (max-width: 620px) {
