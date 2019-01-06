@@ -197,14 +197,6 @@ a.button:hover {
   margin: 0 20px;
   padding: 0;
 }
-.person .overlay {
-  position: absolute;
-  transition-duration: .2s;
-  opacity: 0;
-}
-.person .overlay:hover {
-  opacity: .9;
-}
 .person .name {
   padding-top: 1.2em;
   font-weight: bold;
@@ -212,6 +204,19 @@ a.button:hover {
 .person .slogan {
   padding-top: 1.2em;
 }
+
+
+/* logo overlay for copy-protection */
+.overlay {
+  position: absolute;
+  transition-duration: .2s;
+  opacity: 0;
+}
+.overlay:hover {
+  opacity: .9;
+}
+
+
 
 h3 {
   font-weight: bold;
