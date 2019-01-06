@@ -88,8 +88,8 @@ function break_on_syllables() {
       .replace(min3, "$1");
   }
   for(let p of document.querySelectorAll('p')) {
-    // no image inside
-    if(!/<img/.test(p.innerHTML))
+    // no critical html tag inside
+    if(!/(?!<br>|<i>)<[a-z]/.test(p.innerHTML))
       p.innerHTML = break_text(p.innerHTML)
   }
 }
