@@ -97,6 +97,9 @@ nav a:hover {
 .trunk > * {
   max-width: 100%;
 }
+img {
+  border-radius: 5px;
+}
 img.blur {
   filter: blur(5px) saturate(30%) brightness(1.5);
 }
@@ -242,6 +245,11 @@ ul {
 
 li {
   padding-top:1em;
+}
+
+i {
+  font-style: italic;
+  color: rgb(65, 63, 63);
 }
 
 .logo {
