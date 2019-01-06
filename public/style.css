@@ -99,7 +99,7 @@ div .trunk {
   
 }
 
-.img {
+img {
   border-radius: 5px;
 }
 
@@ -251,6 +251,11 @@ ul {
 
 li {
   padding-top:1em;
+}
+
+i {
+  font-style: italic;
+  color: rgb(65, 63, 63);
 }
 
 .logo {
