@@ -51,7 +51,8 @@ function team_view_sliding() {
   }
 }
 
-
+// TODO: remove following function as soon as chrome implements this function, see https://caniuse.com/#search=hyphens
+//
 // enable wordbreak on syllables
 //
 // ruleset from https://www.kapiert.de/deutsch/klasse-5-6/rechtschreibung/rechtschreibstrategien/woerter-in-silben-zerlegen/
