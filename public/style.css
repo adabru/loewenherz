@@ -53,20 +53,6 @@ nav .logo:hover {
   background-size: cover;
 }
 
-nav a {
-  display: inline-block;
-  color: rgb(255, 255, 255);
-  background: #f80;
-  font-size: 1em;
-  text-decoration: none;
-  font-weight: normal;
-
-}
-nav a:hover {
-  color: #f80;
-  background: rgb(255, 255, 255);
-}
-
 
 /* main content pane */
 .trunk {
@@ -82,6 +68,7 @@ nav a:hover {
   flex: 1 1 50%;
   max-width: 350px;
   width: 350px;
+  box-sizing: border-box;
 }
 .trunk section > *:nth-child(2n+1) {
   margin-right: 30px;
@@ -116,10 +103,12 @@ footer {
 footer > span, a {
   display: inline-block;
   font-size: 1em;
-  color: rgba(46, 44, 44, 0.938);
-  background: #fff;
   padding: 1em;
   text-decoration: none;
+}
+footer > span, footer a {
+  color: rgba(46, 44, 44, 0.938);
+  background: #fff;
 }
 footer a:hover {
   text-decoration: underline;
@@ -127,6 +116,21 @@ footer a:hover {
 footer > *:first-child {
   /* move the buttons to the right and shrink for responsiveness */
   flex: 1 1;
+}
+
+
+/* links */
+a.button {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background: #f80;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: normal;
+}
+a.button:hover {
+  color: #f80;
+  background: rgb(255, 255, 255);
 }
 
 
