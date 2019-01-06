@@ -72,8 +72,8 @@ function break_on_syllables() {
   var breaker, min3;
   {
     const vowels = [].concat(
-      ['au','eu','ie','ei','äu'], ['a','e','i','o','u'], ['ä','ö','ü'],
-      ['Au','Eu','Ie','Ei','Äu'], ['A','E','I','O','U'], ['Ä','Ö','Ü']
+      ['au','eu','ie','ei','äu'], ['a(?!u)','e(?![ui])','i(?!e)','o','u'], ['ä(?!u)','ö','ü'],
+      ['Au','Eu','Ie','Ei','Äu'], ['A(?!u)','E(?![ui])','I(?!e)','O','U'], ['Ä(?!u)','Ö','Ü']
     )
     const consonants = [].concat(
       ['ch','ck','ph','rh',/*'sh',*/'th','sch','ß'],
@@ -90,7 +90,7 @@ function break_on_syllables() {
       // minimum 3 letters before breaking
       .replace(min3, "$1");
   }
-  for(let p of document.querySelectorAll('p')) {
+  for(let p of document.querySelectorAll('p, div')) {
     // no critical html tag inside
     if(!/(?!<br>|<i>)<[a-z]/.test(p.innerHTML))
       p.innerHTML = break_text(p.innerHTML)
