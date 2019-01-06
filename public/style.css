@@ -182,7 +182,7 @@ a.button:hover {
   height: 100%;
   cursor: pointer;
 }
-.team_container #arrow_right, .team_container #arrow_left {
+.team_container .arrow_right, .team_container .arrow_left {
   position: absolute;
   width: 80px;
   margin: 0;
@@ -190,13 +190,13 @@ a.button:hover {
   z-index: 1;
   transition-duration: .5s;
 }
-.team_container #arrow_right:hover, .team_container #arrow_left:hover {
+.team_container .arrow_right:hover, .team_container .arrow_left:hover {
   filter: brightness(50%);
 }
-.team_container #arrow_right {
+.team_container .arrow_right {
   right: -100px;
 }
-.team_container #arrow_left {
+.team_container .arrow_left {
   left: -100px;
   transform: scaleX(-1);
 }
@@ -275,10 +275,10 @@ i {
 
 /* responsive */
 @media only screen and (max-width: 1000px) {
-  .team_container #arrow_right {
+  .team_container .arrow_right {
     right: -50px;
   }
-  .team_container #arrow_left {
+  .team_container .arrow_left {
     left: -50px;
   }
 }
@@ -288,10 +288,10 @@ i {
   }
 }
 @media only screen and (max-width: 890px) {
-  .team_container #arrow_right {
+  .team_container .arrow_right {
     right: 10px;
   }
-  .team_container #arrow_left {
+  .team_container .arrow_left {
     left: 10px;
   }
 }
