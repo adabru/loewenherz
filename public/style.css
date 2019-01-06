@@ -84,6 +84,9 @@ nav .logo:hover {
   margin: 0 0 1.2em 0;
   text-align: justify;
 }
+.trunk > h2 {
+  text-align: initial;
+}
 .trunk > * {
   max-width: 100%;
 }
