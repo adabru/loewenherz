@@ -328,8 +328,18 @@ i {
     font-size: .3em;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 470px) {
   nav {
     font-size: .8em;
+  }
+}
+@media only screen and (max-width: 380px) {
+  nav {
+    font-size: .65em;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .trunk section * {
+    width: 100%;
   }
 }
