@@ -40,6 +40,9 @@ nav {
   justify-content: flex-end;
   border-top: 1px solid #bbb;
 }
+nav a.button {
+  border-radius: 0;
+}
 nav .logo {
   height: 3em;
   width: 3em;
@@ -125,6 +128,8 @@ a.button {
   color: rgb(255, 255, 255);
   background: #f80;
   font-size: 1em;
+  border-radius: 5px;
+  text-align: center;
   text-decoration: none;
   font-weight: normal;
 }
