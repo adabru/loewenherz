@@ -77,7 +77,7 @@ nav .logo:hover {
   font-size: 2.2em;
   margin: 2.4em 0 1.2em 0;
 }
-.trunk * {
+.trunk > *, .trunk section > * {
   margin: 0 0 1.2em 0;
   text-align: justify;
 }
@@ -154,14 +154,6 @@ a.button:hover {
   display: flex;
   overflow-x: auto;
 }
-.team::before {
-  content: '';
-  padding-left: 200px;
-}
-.team::after {
-  content: '';
-  padding-right: 200px;
-}
 .team_container .arrows {
   position: absolute;
   width: 100%;
@@ -213,16 +205,12 @@ a.button:hover {
 .person .overlay:hover {
   opacity: .9;
 }
-/*.person .details {
-}*/
-.person > * {
-  padding: 1.2em 0 5px 0;
-}
 .person .name {
+  padding-top: 1.2em;
   font-weight: bold;
 }
-.person .details > * {
-  padding-bottom: 1em;
+.person .slogan {
+  padding-top: 1.2em;
 }
 
 h3 {
