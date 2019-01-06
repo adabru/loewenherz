@@ -135,14 +135,31 @@ a.button:hover {
 
 
 /* pdf download */
-.pdf_download::before {
+.pdf_downloads {
+  display: flex;
+}
+.pdf_downloads div:first-child {
+  margin-right: 10px;
+  flex-grow: 1;
+}
+.pdf_downloads div {
+  display: flex;
+  flex-direction: column;
+}
+.pdf_downloads a::before {
   content: '';
   display: inline-block;
   width: 32px;
   height: 32px;
   background: url(assets/pdf32.png);
 }
-
+.pdf_downloads > * > * {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  padding: 0;
+  height: 4em;
+}
 
 
 /* team view */
@@ -297,6 +314,11 @@ i {
   }
   footer .footer_buttons {
     font-size: .6em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .pdf_downloads > * > a {
+    font-size: .3em;
   }
 }
 @media only screen and (max-width: 450px) {
