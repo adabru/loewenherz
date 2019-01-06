@@ -87,6 +87,9 @@ function break_on_syllables() {
       // minimum 3 letters before breaking
       .replace(min3, "$1");
   }
-  for(let p of document.querySelectorAll('p'))
-    p.innerHTML = break_text(p.innerHTML)
+  for(let p of document.querySelectorAll('p')) {
+    // no image inside
+    if(!/<img/.test(p.innerHTML))
+      p.innerHTML = break_text(p.innerHTML)
+  }
 }
