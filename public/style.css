@@ -312,7 +312,7 @@ i {
     margin-right: 0;
   }
   .trunk section * {
-    flex: 0;
+    flex: initial;
   }
 }
 @media only screen and (max-width: 620px) {
