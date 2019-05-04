@@ -6,6 +6,10 @@
 }
 html {
   font-size: 16px;
+  height: 100%;
+}
+body {
+  height: 100%;
 }
 html * {
   font-family: altehaas;
@@ -18,6 +22,7 @@ html * {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background: none;
   background: url(clarify/fest.jpg);
   background-size: cover;
   background-position: center;
@@ -234,6 +239,7 @@ a.button:hover {
 /* logo overlay for copy-protection with div and without */
 div.overlay {
   position: relative;
+  height: fit-content;
   flex: 0 auto;
   width: initial;
 }
@@ -297,11 +303,6 @@ i {
     left: -50px;
   }
 }
-@media only screen and (max-width: 950px) {
-  footer > span:first-child {
-    font-size: .8em;
-  }
-}
 @media only screen and (max-width: 890px) {
   .team_container .arrow_right {
     right: 10px;
@@ -327,31 +328,37 @@ i {
     flex: initial;
   }
 }
+@media only screen and (max-width: 500px) {
+  .pdf_downloads > * > a {
+    font-size: .3em;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .trunk section * {
+    width: initial;
+  }
+}
+/* navigation header and footer*/
+@media only screen and (max-width: 581px) {
+  nav {
+    font-size: .8em;
+  }
+}
+@media only screen and (max-width: 467px) {
+  nav {
+    font-size: .65em;
+  }
+}
+@media only screen and (max-width: 950px) {
+  footer > span:first-child {
+    font-size: .8em;
+  }
+}
 @media only screen and (max-width: 620px) {
   footer > span:first-child {
     font-size: .4em;
   }
   footer .footer_buttons {
     font-size: .6em;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .pdf_downloads > * > a {
-    font-size: .3em;
-  }
-}
-@media only screen and (max-width: 470px) {
-  nav {
-    font-size: .8em;
-  }
-}
-@media only screen and (max-width: 380px) {
-  nav {
-    font-size: .65em;
-  }
-}
-@media only screen and (max-width: 350px) {
-  .trunk section * {
-    width: initial;
   }
 }
