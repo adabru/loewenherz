@@ -101,6 +101,7 @@ nav .logo:hover {
 .trunk section {
   display: flex;
   flex-wrap: wrap;
+  hyphens: auto;
 }
 .trunk section * {
   flex: 1 1 50%;
