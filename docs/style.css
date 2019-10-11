@@ -283,6 +283,10 @@ div.overlay > img:first-child {
 div.overlay > img:first-child:hover, img.overlay:hover {
   opacity: .9;
 }
+div.overlay > img:nth-child(2) {
+  max-width: 100%;
+}
+
 img.overlay {
   position: absolute;
   transition-duration: .2s;
