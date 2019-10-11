@@ -16,7 +16,7 @@ var server = http.createServer( (req, res) => {
   } else {
     if(req.url.endsWith('/')) req.url += 'index.html'
     var pathname = url.parse(req.url).pathname.substr(prefix.length)
-    fs.createReadStream(`./public${pathname}`)
+    fs.createReadStream(`./docs${pathname}`)
       .on('error', () => {
         res.writeHead(404)
         res.end('not found') })
