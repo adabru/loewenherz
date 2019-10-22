@@ -1,4 +1,5 @@
 <!--meta-->
+<html lang="de" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="TPZ Villa Löwernherz Dortmund">
@@ -9,9 +10,19 @@
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- TODO: remove Hyphenopoly.js dependency as soon as chrome implements this function, see https://caniuse.com/#search=hyphens -->
+<script>
+  var Hyphenopoly = {
+      require: { "de": "Silbentrennungsalgorithmus" },
+      setup: { selectors: { ".trunk section": {} } }
+  };
+</script>
+<script src="Hyphenopoly/Hyphenopoly_Loader.js"></script>
 <!---->
 <div class="pagelayout">
   <!--header-->
+  <!-- make background image load faster -->
+  <img style="display:none;" src="clarify/fest.jpg" />
   <nav>
     <a class="logo"  href="index.html"></a>
     <ul>
@@ -44,24 +55,78 @@
   <!---->
   <div class="trunk">
     <h2>
-      Anfahrt
+   Kontakt
     </h2>
+
+
+    Wir freuen uns darüber, dass Sie mit uns Kontakt aufnehmen möchten. Sie können uns dazu eine E-Mail senden oder uns einfach direkt persönlich anrufen.
+     <br>
+     <br>
+
+    <h3>Anschriften und Kontaktdaten</h3>
     <section>
-      <p>
-        Therapeutisch-Pädagogisches Zentrum 1+2<br>
-        Villa Löwenherz<br>
-        Oesterholzstr. 132<br>
-        44145 Dortmund<br>
-      </p>
-      <p>
-        Therapeutisch-Pädagogisches Zentrum 3<br>
-        Villa Löwenherz<br>
-        Hagener Str. 180<br>
-        58239 Schwerte<br>
-      </p>
-      <iframe src='https://www.uwp.is.ed.ac.uk/3rd-party-widgets/maps/embeds/gm.php?map=n87t9AfVQs' width='420' height='400' frameborder='0' class='uwpgmap'></iframe>
-      <iframe src='https://www.uwp.is.ed.ac.uk/3rd-party-widgets/maps/embeds/gm.php?map=UgOhRYtIqq' width='420' height='400' frameborder='0' class='uwpgmap'></iframe>
+
+    <p> Therapeutisch-Pädagogisches Zentrum
+    <br> (TPZ 1-2) Villa Löwenherz
+    <br> Oesterholzstr. 132
+    <br> 44145 Dortmund
+    <br>
+    <br>Email: info@tpz-loewenherz.de
+    <br>Telefon: 0231 / 28 68 08-60
+    <br>Fax: 0231 / 29 299 309
+    </p>
+
+    <p> Therapeutisch-Pädagogisches Zentrum
+    <br>(TPZ 3) Villa Löwenherz
+    <br>Hagener Str. 180
+    <br>58239 Schwerte
+    <br>
+    <br>Email: info@tpz-loewenherz.de
+    <br>Telefon: 02304 / 46 867 65
+    <br>Fax: 0231 / 29 299 309
+    </p>
+
     </section>
+
+    <h3>Geschäftsführung</h3>
+    <section>
+
+    <p> Dr. Regina Hiller
+    <br>
+    <br> Dipl.-Psych. / Dipl.-Päd. / Dipl.-Soz.Päd.
+    Kinder- und Jugendlichenpsychotherapeutin
+    <br>
+    <br> Email: hiller@tpz-loewenherz.de
+    <br> Telefon: 0231 / 28 68 08-60
+    <br> Mobil:  0171 / 9800 808
+    </p>
+
+    </section>
+
+    <h3>Verwaltung</h3>
+    <section>
+
+    <p> Sven Heinrich-Hirn
+    <br>
+    <br> Linguist (B.A.)
+    <br>
+    <br> Email: heinrich@tpz-loewenherz.de
+    <br> Telefon: 0231 / 28 68 08-71
+    <br> Fax: 0231 / 29 299 309
+    </p>
+
+    <p> Johannes Kern
+    <br>
+    <br> Theologe/Historiker (M.A.)
+    <br>
+    <br> Email: kern@tpz-loewenherz.de
+    <br> Telefon: 0231 / 28 68 08-71
+    <br> Fax: 0231 / 29 299 309
+    </p>
+
+    </section>
+
+
   </div>
   <!--footer-->
   <footer>
@@ -75,3 +140,7 @@
   </footer>
   <!---->
 </div>
+
+<!--script-->
+<script src="script.js"></script>
+<!---->

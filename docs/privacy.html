@@ -1,4 +1,5 @@
 <!--meta-->
+<html lang="de" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="TPZ Villa Löwernherz Dortmund">
@@ -9,9 +10,19 @@
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- TODO: remove Hyphenopoly.js dependency as soon as chrome implements this function, see https://caniuse.com/#search=hyphens -->
+<script>
+  var Hyphenopoly = {
+      require: { "de": "Silbentrennungsalgorithmus" },
+      setup: { selectors: { ".trunk section": {} } }
+  };
+</script>
+<script src="Hyphenopoly/Hyphenopoly_Loader.js"></script>
 <!---->
 <div class="pagelayout">
   <!--header-->
+  <!-- make background image load faster -->
+  <img style="display:none;" src="clarify/fest.jpg" />
   <nav>
     <a class="logo"  href="index.html"></a>
     <ul>
@@ -142,7 +153,4 @@ Die<a href="https://help.github.com/articles/global-privacy-practices/"><span st
 
 <!--script-->
 <script src="script.js"></script>
-<script>
-  break_on_syllables()
-</script>
 <!---->

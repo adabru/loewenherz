@@ -1,4 +1,5 @@
 <!--meta-->
+<html lang="de" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="TPZ Villa Löwernherz Dortmund">
@@ -9,9 +10,19 @@
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- TODO: remove Hyphenopoly.js dependency as soon as chrome implements this function, see https://caniuse.com/#search=hyphens -->
+<script>
+  var Hyphenopoly = {
+      require: { "de": "Silbentrennungsalgorithmus" },
+      setup: { selectors: { ".trunk section": {} } }
+  };
+</script>
+<script src="Hyphenopoly/Hyphenopoly_Loader.js"></script>
 <!---->
 <div class="pagelayout">
   <!--header-->
+  <!-- make background image load faster -->
+  <img style="display:none;" src="clarify/fest.jpg" />
   <nav>
     <a class="logo"  href="index.html"></a>
     <ul>
@@ -44,37 +55,24 @@
   <!---->
   <div class="trunk">
     <h2>
-   Bewerbung
+      Anfahrt
     </h2>
-
-    <p>
-    Wir freuen uns, dass Sie sich bei uns bewerben möchten. Sie können uns Ihre aussagekräftigen Bewerbungsunterlagen postalisch oder als PDF-Datei an unsere Emailadresse senden:
-     <br>
-     <br>
-     Postalisch:
-     <br>
-  <br> Neue Wege gGmbH <br> 
-      Therapeutisch-Pädagogisches Zentrum Villa Löwenherz
-      <br> Oesterholzstr. 132
-      <br> 44145 Dortmund
-      <br>
-      <br>
-    Email: bewerbung@tpz-loewenherz.de
-    </p>
-    
-      <h2>
-        Stellenanzeigen:
-      </h2>
-    
-    <div class="pdf_downloads">
-      <div>
-        <a href="assets/download/stellenanzeige_fachkraft.pdf">Stellenangebot</a>
-      </div>
-
-      <div>
-        <p>Stellenanzeige für eine Pädagogische Fachkraft (m,w,d)</p>
-      </div>
-    </div>
+    <section>
+      <p>
+        Therapeutisch-Pädagogisches Zentrum 1+2<br>
+        Villa Löwenherz<br>
+        Oesterholzstr. 132<br>
+        44145 Dortmund<br>
+      </p>
+      <p>
+        Therapeutisch-Pädagogisches Zentrum 3<br>
+        Villa Löwenherz<br>
+        Hagener Str. 180<br>
+        58239 Schwerte<br>
+      </p>
+      <iframe src='https://www.uwp.is.ed.ac.uk/3rd-party-widgets/maps/embeds/gm.php?map=n87t9AfVQs' width='420' height='400' frameborder='0' class='uwpgmap'></iframe>
+      <iframe src='https://www.uwp.is.ed.ac.uk/3rd-party-widgets/maps/embeds/gm.php?map=UgOhRYtIqq' width='420' height='400' frameborder='0' class='uwpgmap'></iframe>
+    </section>
   </div>
   <!--footer-->
   <footer>
@@ -88,10 +86,3 @@
   </footer>
   <!---->
 </div>
-
-<!--script-->
-<script src="script.js"></script>
-<script>
-  break_on_syllables()
-</script>
-<!---->

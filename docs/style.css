@@ -22,8 +22,7 @@ html * {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: none;
-  background: url(clarify/fest.jpg);
+  background: #ebc711 url(clarify/fest.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -102,6 +101,7 @@ nav .logo:hover {
 .trunk section {
   display: flex;
   flex-wrap: wrap;
+  hyphens: auto;
 }
 .trunk section * {
   flex: 1 1 50%;
@@ -283,6 +283,10 @@ div.overlay > img:first-child {
 div.overlay > img:first-child:hover, img.overlay:hover {
   opacity: .9;
 }
+div.overlay > img:nth-child(2) {
+  max-width: 100%;
+}
+
 img.overlay {
   position: absolute;
   transition-duration: .2s;

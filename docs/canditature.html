@@ -1,4 +1,5 @@
 <!--meta-->
+<html lang="de" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="TPZ Villa Löwernherz Dortmund">
@@ -9,9 +10,19 @@
 <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32">
 <link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- TODO: remove Hyphenopoly.js dependency as soon as chrome implements this function, see https://caniuse.com/#search=hyphens -->
+<script>
+  var Hyphenopoly = {
+      require: { "de": "Silbentrennungsalgorithmus" },
+      setup: { selectors: { ".trunk section": {} } }
+  };
+</script>
+<script src="Hyphenopoly/Hyphenopoly_Loader.js"></script>
 <!---->
 <div class="pagelayout">
   <!--header-->
+  <!-- make background image load faster -->
+  <img style="display:none;" src="clarify/fest.jpg" />
   <nav>
     <a class="logo"  href="index.html"></a>
     <ul>
@@ -44,35 +55,37 @@
   <!---->
   <div class="trunk">
     <h2>
-      Sponsoren & Förderer
+   Bewerbung
     </h2>
-    <section>
-      <p>
-        Das Therapeutisch-Pädagogische Zentrum Villa Löwenherz der Neue Wege gemeinnützige GmbH möchte traumatisierten Kindern wie Anna eine Chance geben!
-      </p>
-      <p>
-        <a class="button" href="anna.html">Annas Geschichte</a>
-      </p>
-      <p>
-        Wenn Ihnen diese Kinder auch am Herzen liegen, dann helfen Sie mit! Das Therapeutisch-Pädagogische Zentrum Villa Löwenherz ist als gemeinnützig anerkannt und erteilt steuerabzugsfähige Sammel-/Spenden-Bestätigungen im Folgejahr!
-      </p>
-    </section>
 
-    <h2>
-      Spendenkonto der Neue Wege gGmbH
-    </h2>
-    <section>
     <p>
-      IBAN: DE74 4416 0014 6483 4768 00
+    Wir freuen uns, dass Sie sich bei uns bewerben möchten. Sie können uns Ihre aussagekräftigen Bewerbungsunterlagen postalisch oder als PDF-Datei an unsere Emailadresse senden:
+     <br>
+     <br>
+     Postalisch:
+     <br>
+  <br> Neue Wege gGmbH <br> 
+      Therapeutisch-Pädagogisches Zentrum Villa Löwenherz
+      <br> Oesterholzstr. 132
+      <br> 44145 Dortmund
       <br>
-      BIC: GENODEM1DOR
       <br>
-      Kreditinstitut: Dortmunder Volksbank
-      <br>
-      Verwendungszweck: Villa Löwenherz
+    Email: bewerbung@tpz-loewenherz.de
     </p>
-    <img src="assets/NeueWege_Logo.jpg" style="flex: 0 auto;width: 190px;">
-  </section>
+    
+      <h2>
+        Stellenanzeigen:
+      </h2>
+    
+    <div class="pdf_downloads">
+      <div>
+        <a href="assets/download/stellenanzeige_fachkraft.pdf">Stellenangebot</a>
+      </div>
+
+      <div>
+        <p>Stellenanzeige für eine Pädagogische Fachkraft (m,w,d)</p>
+      </div>
+    </div>
   </div>
   <!--footer-->
   <footer>
@@ -89,7 +102,4 @@
 
 <!--script-->
 <script src="script.js"></script>
-<script>
-  break_on_syllables()
-</script>
 <!---->
