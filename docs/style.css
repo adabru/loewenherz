@@ -64,10 +64,6 @@ nav ul ul li a {
   box-sizing: border-box;
   color: white;
 }
-nav ul ul li:hover a {
-  color: rgb(255, 154, 64);
-  background: white;
-}
 nav ul li:hover ul {
   display: block;
 }
@@ -96,8 +92,9 @@ nav .logo:hover {
 .trunk {
   margin: 3em auto;
   flex-grow: 1;
+  width: 100%;
   max-width: calc(350px + 30px + 350px); /* 5px tolerance for two images next to each other */
-  padding: 4px;
+  box-sizing: border-box;
 }
 .trunk section {
   display: flex;
@@ -143,7 +140,7 @@ footer {
   flex-wrap: wrap;
   border-top: 1px solid #bbb;
 }
-footer > span, a {
+footer > span, footer a {
   display: inline-block;
   font-size: 1em;
   padding: 1em;
@@ -167,6 +164,7 @@ a.button {
   display: inline-block;
   color: rgb(255, 255, 255);
   background: #f80;
+  padding: 1em;
   font-size: 1em;
   border-radius: 5px;
   text-align: center;
@@ -354,7 +352,11 @@ i {
     align-items: center;
   }
   .trunk > * {
-    max-width: 75%;
+    max-width: 85%;
+    width: 85%;
+  }
+  .trunk > h2, .trunk > h3 {
+    width: initial;
   }
   .trunk section {
     flex-direction: column;
@@ -365,13 +367,17 @@ i {
   }
   .trunk section * {
     flex: initial;
-    width: initial;
+    width: 100%;
     max-width: 100%;
   }
 }
 @media only screen and (max-width: 350px) {
+  .trunk {
+    padding: 4px;
+  }
   .trunk > * {
     max-width: 100%;
+    width: 100%;
   }
 }
 
