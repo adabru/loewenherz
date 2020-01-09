@@ -373,14 +373,9 @@ i {
   }
 }
 /* navigation header and footer*/
-@media only screen and (max-width: 581px) {
+@media only screen and (max-width: 680px) {
   nav {
-    font-size: .8em;
-  }
-}
-@media only screen and (max-width: 467px) {
-  nav {
-    font-size: .65em;
+    font-size: 2.35vw;
   }
 }
 @media only screen and (max-width: 950px) {
