@@ -4,8 +4,13 @@ http = require('http')
 fs = require('fs')
 path = require('path')
 url =  require('url')
+os = require("os")
 
-host = process.argv[2] || "::1"
+host = process.argv[2] 
+  || Object.values(os.networkInterfaces())
+  .map(iface => iface.map(({address}) => address).find(address => address.startsWith("192")))
+  .find(address => address != null)
+  || "::1"
 port = process.argv[3] || 8080
 prefix = process.argv[4] || ""
 
