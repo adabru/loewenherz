@@ -207,6 +207,66 @@ a.button:hover {
 
 
 /* team view */
+.swiper-team {
+  position: relative;
+}
+
+.swipe-prev {
+  left: -70px;
+}
+
+.swipe-next {
+  right: -70px;
+}
+
+.swipe-prev, .swipe-next {
+  position: absolute;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swipe-prev span {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+}
+
+.swipe-next span {
+  position: absolute;
+  top: 45%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+}
+
+
+
+.swiper-slide .person {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0;
+}
+
+.swiper-slide .person .body {
+  padding: 1.2rem;
+}
+
+.swiper-slide .person .name {
+  padding: 0 0 1rem 0;
+}
+
+.swiper-slide .person img {
+  width: 100%;
+  margin: 0;
+}
+
 .team_container {
   max-width: calc(100vw - 16px); /* with tolerance for scrollbar */
   position: relative;
