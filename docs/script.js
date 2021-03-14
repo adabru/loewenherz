@@ -1,7 +1,11 @@
+$(document).ready(function ($) {
+  $('.swiper-team .person').matchHeight()
+})
 
-const swiper = new Swiper('.swiper-container', {
+new Swiper('.swiper-container', {
   slidesPerView: 3,
   spaceBetween: 10,
+  speed: 600,
 
   pagination: {
     el: '.swiper-pagination',
