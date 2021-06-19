@@ -238,6 +238,20 @@ a.button:hover {
   left: 50%;
 }
 
+.download-btn {
+  background-color: #f80;
+  color: white;
+  font-size: 18px;
+  max-width: 210px !important;
+  display: block;
+  margin-top: 20px;
+  transition: 200ms;
+}
+
+.download-btn:hover {
+  box-shadow: 0 5px 20px 5px rgba(0,0,0,0.1);
+}
+
 .swipe-next span {
   position: absolute;
   top: 40%;
