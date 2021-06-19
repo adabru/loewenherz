@@ -1,4 +1,21 @@
+$(document).ready(function ($) {
+  $('.swiper-team .person').matchHeight()
+})
 
+new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  speed: 600,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.swipe-next',
+    prevEl: '.swipe-prev',
+  },
+});
 
 // enable the left/right buttons in the team view to scroll to the previous/next person
 function team_view_sliding() {

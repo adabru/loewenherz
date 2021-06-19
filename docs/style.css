@@ -27,13 +27,11 @@ html * {
   background-position: center;
 }
 
-
 /* general wrapping */
 .flexwrap {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 /* navigation header */
 nav {
@@ -81,7 +79,7 @@ nav a.button {
 nav .logo {
   height: 3em;
   width: 3em;
-  margin: 0em auto 0 6px;
+  margin: 0 auto 0 6px;
   background:  url(assets/Villa_Loewe.png);
   background-size: cover;
   padding: 0;
@@ -90,7 +88,6 @@ nav .logo:hover {
   background:  url(assets/Villa_Loewe2.png);
   background-size: cover;
 }
-
 
 /* main content pane */
 .trunk {
@@ -205,8 +202,107 @@ a.button:hover {
   height: 4em;
 }
 
-
 /* team view */
+.swiper-team {
+  position: relative;
+}
+
+.swiper-slide:nth-child(even) .person {
+  background: #fff;
+  box-shadow: 0 0 6px 3px #fff;
+}
+
+.swipe-prev {
+  left: -70px;
+}
+
+.swipe-next {
+  right: -70px;
+}
+
+.swipe-prev, .swipe-next {
+  position: absolute;
+  border: 2px solid #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.swipe-prev span {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+.download-btn {
+  background-color: #f80;
+  color: white;
+  font-size: 18px;
+  max-width: 210px !important;
+  display: block;
+  margin-top: 20px;
+  transition: 200ms;
+}
+
+.download-btn:hover {
+  box-shadow: 0 5px 20px 5px rgba(0,0,0,0.1);
+}
+
+.swipe-next span {
+  position: absolute;
+  top: 40%;
+  right: 8px;
+}
+
+.swipe-prev span, .swipe-next span {
+  color: #fff;
+  font-size: 80px;
+  transform: translate(-50%, -50%);
+  transition: 300ms;
+}
+
+.swipe-prev:hover, .swipe-next:hover {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.swipe-prev:hover span, .swipe-next:hover span {
+  color: #444;
+}
+
+.swipe-next:focus, .swipe-prev:focus {
+  outline: none !important;
+}
+
+.swiper-slide .person {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.swiper-slide .person .body {
+  padding: 1.2rem;
+}
+
+.swiper-slide .person .role, .swiper-slide .person .slogan {
+  font-size: 14px;
+}
+
+.swiper-slide .person .name {
+  padding: 0 0 1rem 0;
+  font-size: 20px;
+}
+
+.swiper-slide .person img {
+  width: 100%;
+  margin: 0;
+  filter: contrast(105%);
+}
+
 .team_container {
   max-width: calc(100vw - 16px); /* with tolerance for scrollbar */
   position: relative;
