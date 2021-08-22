@@ -10,7 +10,7 @@ port = process.argv[3] || 8080
 prefix = process.argv[4] || ""
 
 var server = http.createServer( (req, res) => {
-  if(req.url == path.normalize(req.url)) {
+  if(req.url !== path.normalize(req.url)) {
     res.writeHead(400)
     res.end('invalid path')
   } else {
